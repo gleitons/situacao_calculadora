@@ -1,4 +1,4 @@
-let visor = ''
+let visor = 'desligada'
 let valor1 = 0
 let valor2 = 0;
 let soma = 1;
@@ -7,8 +7,7 @@ let labelVisor = document.querySelector('#visor')
 let operacao = ''
 
 const reset = function(){
-        visor = ''
-    // labelVisor.innerHTML= '0' 
+    visor = ''
     const tecla = '';
     if (visor == 'desligada') {
         alerta();
@@ -197,14 +196,7 @@ const igual = function () {
     }
      
 }
-function verficaOn(vLo, teclaA) {
-    if (vLo == 'desligada') {
-        alert('Ligue a calculadora')
-    } 
-    else {
-        return visor = visor + tecla;
-    }
-}
+
 function alerta() {
     return alert('Ligue a Calculadora "ON"')
 }
