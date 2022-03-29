@@ -173,31 +173,26 @@ const igual = function () {
     switch(operacao){
         case 'soma': 
             const sTotal = parseFloat(valor1) + parseFloat(visor);  
-            console.log(sTotal);
             labelVisor.innerHTML= `${sTotal}`;  
             visor = sTotal;
             break;                       
         case 'divisao':
             const dTotal = parseFloat(valor1) / parseFloat(visor);            
-            console.log(dTotal);
             labelVisor.innerHTML= `${dTotal}`; 
             visor = dTotal;
             break;
         case 'multiplicacao':
             const mTotal = parseFloat(valor1) * parseFloat(visor);            
-            console.log(mTotal);
             labelVisor.innerHTML= `${mTotal}`; 
             visor = mTotal;
             break;
         case 'subtracao':
             const subTotal = parseFloat(valor1) - parseFloat(visor);            
-            console.log(subTotal);
             labelVisor.innerHTML= `${subTotal}`; 
             visor = subTotal;            
         break;
         case 'porcentagem':
             const porCent = parseFloat(valor1) - parseFloat(visor);            
-            console.log(subTotal);
             labelVisor.innerHTML= `${subTotal}`; 
             visor = subTotal;            
         break;

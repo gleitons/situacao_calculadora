@@ -34,7 +34,7 @@ button{
     text-align: center;
     background-color: #afafaf;
     border: 2px solid white;
-    box-shadow: rgb(159, 159, 159) 0px 5px 0px 0px;
+    box-shadow: rgb(159, 159, 159) 0 5px;
     border-radius: 10px;
     color: #1d1d1d;
 }
