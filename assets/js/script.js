@@ -4,7 +4,9 @@ let valor2 = 0;
 let soma = 1;
 let resultado = 0
 let labelVisor = document.querySelector('#visor')
-let operacao = ''
+let operacao = '';
+
+
 
 const reset = function(){
     visor = ''
@@ -16,6 +18,7 @@ const reset = function(){
         labelVisor.innerHTML= '0'
     }
 }
+
 const off = function(){
     visor = 'desligada'
     labelVisor.innerHTML= '' 
@@ -27,7 +30,7 @@ const on = function(){
 }
 
 const ponto = function(){
-    const tecla = '0';
+    const tecla = '.';
     if (visor == 'desligada') {
         alerta();
     } else {
@@ -192,6 +195,13 @@ const igual = function () {
             labelVisor.innerHTML= `${subTotal}`; 
             visor = subTotal;            
         break;
+        case 'porcentagem':
+            const porCent = parseFloat(valor1) - parseFloat(visor);            
+            console.log(subTotal);
+            labelVisor.innerHTML= `${subTotal}`; 
+            visor = subTotal;            
+        break;
+        
         default:        
     }
      
