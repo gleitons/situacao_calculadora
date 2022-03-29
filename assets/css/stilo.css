@@ -34,10 +34,16 @@ button{
     text-align: center;
     background-color: #afafaf;
     border: 2px solid white;
+    box-shadow: rgb(159, 159, 159) 0px 5px 0px 0px;
     border-radius: 10px;
+    color: #1d1d1d;
 }
 button:active {
     background-color: #6c6c6c;
+    border: 2px solid rgb(97, 97, 97);
+    color: #151515;
+    box-shadow: inset black 0px 0px 10px 0px;
+    margin-bottom: -5px;
 }
 
 .visor{
