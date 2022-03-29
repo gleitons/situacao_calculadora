@@ -7,64 +7,137 @@ let labelVisor = document.querySelector('#visor')
 let operacao = ''
 
 const reset = function(){
+        visor = ''
+    // labelVisor.innerHTML= '0' 
+    const tecla = '';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= '0'
+    }
+}
+const off = function(){
+    visor = 'desligada'
+    labelVisor.innerHTML= '' 
+    return visor;
+}
+const on = function(){
     visor = ''
-    labelVisor.innerHTML= visor 
+    labelVisor.innerHTML= '0'
 }
 
 const ponto = function(){
-    visor = visor + '.'
-    labelVisor.innerHTML= visor
+    const tecla = '0';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
 }
 
 const clickn0 = function(){
-    visor = visor + '0'
-    labelVisor.innerHTML= visor
+    const tecla = '0';
+    if (visor == 'desligada') {
+       alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
+    
+    
 }
 const clickn1 = function(){
-    visor = visor + '1'
-    labelVisor.innerHTML= visor
+    const tecla = '1';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
 }
 
 const clickn2 = function(){
-    visor = visor + '2'
-    labelVisor.innerHTML= visor 
+    const tecla = '2';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
     
 }
 
 const clickn3 = function(){
-    visor = visor + '3'
-    labelVisor.innerHTML= visor     
+    const tecla = '3';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }     
 }
 
 const clickn4 = function(){
-    visor = visor + '4'
-    labelVisor.innerHTML= visor
+    const tecla = '4';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
 }
 
 const clickn5 = function(){
-    visor = visor + '5'
-    labelVisor.innerHTML= visor 
+    const tecla = '5';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    } 
     
 }
 
 const clickn6 = function(){
-    visor = visor + '6'
-    labelVisor.innerHTML= visor     
+    const tecla = '6';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }    
 }
 
 const clickn7 = function(){
-    visor = visor + '7'
-    labelVisor.innerHTML= visor
+    const tecla = '7';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }
 }
 
 const clickn8 = function(){
-    visor = visor + '8'
-    labelVisor.innerHTML= visor;    
+    const tecla = '8';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }    
 }
 
 const clickn9 = function(){
-    visor = visor + '9'
-    labelVisor.innerHTML= visor     
+    const tecla = '9';
+    if (visor == 'desligada') {
+        alerta();
+    } else {
+        visor = visor + tecla;
+        labelVisor.innerHTML= visor
+    }     
 }
 
 const clickOpSub = function(){
@@ -98,9 +171,9 @@ const igual = function () {
     switch(operacao){
         case 'soma': 
             const sTotal = parseFloat(valor1) + parseFloat(visor);  
-                console.log(sTotal);
-                labelVisor.innerHTML= `${sTotal}`;  
-                visor = sTotal;
+            console.log(sTotal);
+            labelVisor.innerHTML= `${sTotal}`;  
+            visor = sTotal;
             break;                       
         case 'divisao':
             const dTotal = parseFloat(valor1) / parseFloat(visor);            
@@ -123,4 +196,15 @@ const igual = function () {
         default:        
     }
      
+}
+function verficaOn(vLo, teclaA) {
+    if (vLo == 'desligada') {
+        alert('Ligue a calculadora')
+    } 
+    else {
+        return visor = visor + tecla;
+    }
+}
+function alerta() {
+    return alert('Ligue a Calculadora "ON"')
 }

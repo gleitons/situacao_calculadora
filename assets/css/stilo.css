@@ -36,6 +36,9 @@ button{
     border: 2px solid white;
     border-radius: 10px;
 }
+button:active {
+    background-color: #6c6c6c;
+}
 
 .visor{
     background-color: #b7b7fb;
