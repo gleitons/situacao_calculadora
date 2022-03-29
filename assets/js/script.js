@@ -59,8 +59,7 @@ const clickn7 = function(){
 
 const clickn8 = function(){
     visor = visor + '8'
-    labelVisor.innerHTML= visor 
-    
+    labelVisor.innerHTML= visor;    
 }
 
 const clickn9 = function(){
@@ -99,36 +98,29 @@ const igual = function () {
     switch(operacao){
         case 'soma': 
             const sTotal = parseFloat(valor1) + parseFloat(visor);  
-
                 console.log(sTotal);
                 labelVisor.innerHTML= `${sTotal}`;  
                 visor = sTotal;
-            break;                     
-            
+            break;                       
         case 'divisao':
-            const dTotal = parseFloat(valor1) / parseFloat(visor);
-            
+            const dTotal = parseFloat(valor1) / parseFloat(visor);            
             console.log(dTotal);
             labelVisor.innerHTML= `${dTotal}`; 
             visor = dTotal;
             break;
         case 'multiplicacao':
-            const mTotal = parseFloat(valor1) * parseFloat(visor);
-            
+            const mTotal = parseFloat(valor1) * parseFloat(visor);            
             console.log(mTotal);
             labelVisor.innerHTML= `${mTotal}`; 
             visor = mTotal;
             break;
         case 'subtracao':
-            const subTotal = parseFloat(valor1) - parseFloat(visor);
-            
+            const subTotal = parseFloat(valor1) - parseFloat(visor);            
             console.log(subTotal);
             labelVisor.innerHTML= `${subTotal}`; 
-            visor = subTotal;
-            
+            visor = subTotal;            
         break;
-        default:
-        
+        default:        
     }
      
 }
