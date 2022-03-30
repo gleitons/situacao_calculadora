@@ -37,6 +37,14 @@ button{
     box-shadow: rgb(159, 159, 159) 0 5px;
     border-radius: 10px;
     color: #1d1d1d;
+    
+}
+button:hover{    
+    
+    box-shadow: 0 5px rgb(159, 159, 159), 0px 0px 10px 0px #b7b7fb;
+    cursor: pointer;
+    
+    
 }
 button:active {
     background-color: #6c6c6c;
