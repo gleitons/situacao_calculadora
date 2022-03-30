@@ -1,13 +1,9 @@
 let visor = 'desligada'
 let valor1 = 0
 let valor2 = 0;
-let soma = 1;
 let resultado = 0
 let labelVisor = document.querySelector('#visor')
 let operacao = '';
-
-
-
 const reset = function(){
     visor = ''
     const tecla = '';
@@ -18,7 +14,6 @@ const reset = function(){
         labelVisor.innerHTML= '0'
     }
 }
-
 const off = function(){
     visor = 'desligada'
     labelVisor.innerHTML= '' 
@@ -28,17 +23,19 @@ const on = function(){
     visor = ''
     labelVisor.innerHTML= '0'
 }
-
 const ponto = function(){
-    const tecla = '.';
-    if (visor == 'desligada') {
-        alerta();
-    } else {
-        visor = visor + tecla;
-        labelVisor.innerHTML= visor
-    }
+    const verificaPonto = Array.from(visor); // transformei o visor em um array
+    var novoN = []; //crio um array novo sem dados
+    var verifica = verificaPonto.indexOf('.'); //percorro o array para encontrar os '.' (pontos)
+    while (verifica != -1) {
+    novoN.push(verifica);
+    verifica = verificaPonto.indexOf('.', verifica + 1);
+    } // faço um while para colocar todos os '.' pontos no meu novo vetor novoN
+    const nPontos = novoN.length; // conto para ver quantos pontos aparecem   
+    if (nPontos == 0) {
+        visor = visor + '.'; 
+    } // se quantidade de pontos for 0, então eu escrevo o ponto na tela, caso não seja, não faço nada.
 }
-
 const clickn0 = function(){
     const tecla = '0';
     if (visor == 'desligada') {
@@ -46,9 +43,7 @@ const clickn0 = function(){
     } else {
         visor = visor + tecla;
         labelVisor.innerHTML= visor
-    }
-    
-    
+    }      
 }
 const clickn1 = function(){
     const tecla = '1';
@@ -59,7 +54,6 @@ const clickn1 = function(){
         labelVisor.innerHTML= visor
     }
 }
-
 const clickn2 = function(){
     const tecla = '2';
     if (visor == 'desligada') {
@@ -67,10 +61,8 @@ const clickn2 = function(){
     } else {
         visor = visor + tecla;
         labelVisor.innerHTML= visor
-    }
-    
+    }    
 }
-
 const clickn3 = function(){
     const tecla = '3';
     if (visor == 'desligada') {
@@ -80,7 +72,6 @@ const clickn3 = function(){
         labelVisor.innerHTML= visor
     }     
 }
-
 const clickn4 = function(){
     const tecla = '4';
     if (visor == 'desligada') {
@@ -90,7 +81,6 @@ const clickn4 = function(){
         labelVisor.innerHTML= visor
     }
 }
-
 const clickn5 = function(){
     const tecla = '5';
     if (visor == 'desligada') {
@@ -98,10 +88,8 @@ const clickn5 = function(){
     } else {
         visor = visor + tecla;
         labelVisor.innerHTML= visor
-    } 
-    
+    }     
 }
-
 const clickn6 = function(){
     const tecla = '6';
     if (visor == 'desligada') {
@@ -111,7 +99,6 @@ const clickn6 = function(){
         labelVisor.innerHTML= visor
     }    
 }
-
 const clickn7 = function(){
     const tecla = '7';
     if (visor == 'desligada') {
@@ -121,7 +108,6 @@ const clickn7 = function(){
         labelVisor.innerHTML= visor
     }
 }
-
 const clickn8 = function(){
     const tecla = '8';
     if (visor == 'desligada') {
@@ -131,7 +117,6 @@ const clickn8 = function(){
         labelVisor.innerHTML= visor
     }    
 }
-
 const clickn9 = function(){
     const tecla = '9';
     if (visor == 'desligada') {
@@ -141,7 +126,6 @@ const clickn9 = function(){
         labelVisor.innerHTML= visor
     }     
 }
-
 const clickOpSub = function(){
     operacao = 'subtracao'   
     let numero = parseFloat(visor)
@@ -154,7 +138,6 @@ const clickOpSom = function(){
     valor1 = numero
     visor = ''
 }
-
 const clickOpMult = function(){
     operacao = 'multiplicacao'   
     let numero = parseFloat(visor)
@@ -167,9 +150,7 @@ const clickOpDiv = function(){
     valor1 = numero
     visor = ''
 }
-
-const igual = function () {
-    
+const igual = function () {    
     switch(operacao){
         case 'soma': 
             const sTotal = parseFloat(valor1) + parseFloat(visor);  
@@ -195,13 +176,10 @@ const igual = function () {
             const porCent = parseFloat(valor1) - parseFloat(visor);            
             labelVisor.innerHTML= `${subTotal}`; 
             visor = subTotal;            
-        break;
-        
+        break;        
         default:        
-    }
-     
+    }     
 }
-
 function alerta() {
     return alert('Ligue a Calculadora "ON"')
 }
